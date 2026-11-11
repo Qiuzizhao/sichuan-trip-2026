@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html lang="zh-CN">
 <head>
@@ -7,8 +9,8 @@
   <style>
     html:not(.unlocked) body > header,
     html:not(.unlocked) body > main { display: none; }
+{% include_relative trip.css %}
   </style>
-  <link rel="stylesheet" href="trip.css">
 </head>
 <body>
   <div id="access-lock">
@@ -21,7 +23,9 @@
       </form>
     </div>
   </div>
-  <script src="access.js"></script>
+  <script>
+{% include_relative access.js %}
+  </script>
   <header class="trip-header">
     <nav class="trip-nav" aria-label="四川行程页面">
       <a href="index.html">行程</a>
