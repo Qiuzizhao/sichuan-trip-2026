@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>四川行程门票</title>
+  <style>
+    html:not(.unlocked) body > header,
+    html:not(.unlocked) body > main { display: none; }
+  </style>
+  <link rel="stylesheet" href="trip.css">
+</head>
+<body>
+  <div id="access-lock">
+    <div id="access-panel">
+      <h1>四川行程</h1>
+      <form id="access-form">
+        <input id="access-pass" type="password" aria-label="访问密码" placeholder="访问密码" autocomplete="off" required>
+        <button id="access-submit" type="submit">解锁</button>
+        <div id="access-error" role="alert"></div>
+      </form>
+    </div>
+  </div>
+  <script src="access.js"></script>
+  <header class="trip-header">
+    <nav class="trip-nav" aria-label="四川行程页面">
+      <a href="index.html">行程</a>
+      <a href="transport.html">交通</a>
+      <a href="tickets.html" aria-current="page">门票</a>
+    </nav>
+    <h1>门票</h1>
+  </header>
+  <main>
+    <section class="admission-day" aria-labelledby="date-1116">
+      <h2 id="date-1116"><time datetime="2026-11-16">11/16</time></h2>
+      <div class="admission-venue">
+        <h3>九寨沟</h3>
+        <dl class="admission-items">
+          <div><dt>首道门票</dt><dd class="admission-status admission-booked">已订</dd></div>
+          <div><dt>景区观光车</dt><dd class="admission-status">待确认</dd></div>
+        </dl>
+      </div>
+    </section>
+    <section class="admission-day" aria-labelledby="date-1117">
+      <h2 id="date-1117"><time datetime="2026-11-17">11/17</time></h2>
+      <div class="admission-venue">
+        <h3>黄龙</h3>
+        <dl class="admission-items">
+          <div><dt>首道门票</dt><dd class="admission-status admission-booked">已订</dd></div>
+          <div><dt>上行索道</dt><dd class="admission-status">待确认</dd></div>
+          <div><dt>景区观光车</dt><dd class="admission-status">待确认</dd></div>
+        </dl>
+      </div>
+    </section>
+    <section class="admission-day" aria-labelledby="date-1118">
+      <h2 id="date-1118"><time datetime="2026-11-18">11/18</time></h2>
+      <div>
+        <div class="admission-venue">
+          <h3>熊猫谷</h3>
+          <dl class="admission-items">
+            <div><dt>首道门票</dt><dd class="admission-status">待确认</dd></div>
+          </dl>
+        </div>
+        <div class="admission-venue">
+          <h3>都江堰</h3>
+          <dl class="admission-items">
+            <div><dt>首道门票</dt><dd class="admission-status">待确认</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+    <section class="admission-day" aria-labelledby="date-1119">
+      <h2 id="date-1119"><time datetime="2026-11-19">11/19</time></h2>
+      <div class="admission-venue">
+        <h3>乐山大佛</h3>
+        <dl class="admission-items">
+          <div><dt>首道门票（步行）</dt><dd class="admission-status">待确认</dd></div>
+        </dl>
+        <p class="note">步行游览，不坐游船。</p>
+      </div>
+    </section>
+    <section class="admission-day" aria-labelledby="date-1120">
+      <h2 id="date-1120"><time datetime="2026-11-20">11/20</time></h2>
+      <div class="admission-venue">
+        <h3>峨眉山</h3>
+        <dl class="admission-items">
+          <div><dt>首道门票</dt><dd class="admission-status">待确认</dd></div>
+          <div><dt>景区观光车（雷洞坪）</dt><dd class="admission-status">待确认</dd></div>
+          <div><dt>金顶索道</dt><dd class="admission-status">待确认</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

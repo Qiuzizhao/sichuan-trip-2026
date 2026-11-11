@@ -5,64 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>四川 9 天行程</title>
   <style>
-    * { box-sizing: border-box; }
-    body {
-      max-width: 42rem;
-      margin: 0 auto;
-      padding: 0 16px 24px;
-      color: #202725;
-      font: 15px/1.45 system-ui, sans-serif;
-      font-variant-numeric: tabular-nums;
-    }
-    header {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 12px;
-      padding: 12px 0 8px;
-    }
-    h1 { margin: 0; font-size: 21px; }
-    h2 { margin: 0 0 4px; font-size: 16px; }
-    a { color: #096258; text-underline-offset: 3px; }
-    section { padding: 9px 0; border-bottom: 1px solid #dce4e1; }
-    ul { margin: 0; padding: 0; list-style: none; }
-    li + li { margin-top: 3px; }
-    time { font-weight: 650; }
-    .stop { display: inline-block; }
-    .note { margin: 4px 0 0; color: #475650; font-size: 14px; }
     html:not(.unlocked) body > header,
     html:not(.unlocked) body > main { display: none; }
-    #access-lock {
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-    }
-    html.unlocked #access-lock { display: none; }
-    #access-panel { width: min(100%, 20rem); }
-    #access-form { margin-top: 12px; }
-    #access-form input, #access-form button {
-      width: 100%;
-      padding: 10px 12px;
-      border-radius: 6px;
-      font: inherit;
-      font-size: 16px;
-    }
-    #access-pass { border: 1px solid #7e8c87; }
-    #access-submit {
-      margin-top: 8px;
-      border: 0;
-      background: #096258;
-      color: white;
-      cursor: pointer;
-    }
-    #access-error { margin-top: 4px; color: #a31a1a; }
-    table { width: 100%; border-collapse: collapse; margin-bottom: 6px; }
-    th, td { padding: 4px 8px; border-bottom: 1px solid #dce4e1; text-align: left; }
-    thead { background: #eef4f1; }
-    tbody th { width: 5rem; font-weight: 500; white-space: nowrap; }
-    section { scroll-margin-top: 8px; }
-    section:target h2 { color: #096258; }
   </style>
+  <link rel="stylesheet" href="trip.css">
 </head>
 <body>
   <div id="access-lock">
@@ -75,10 +21,14 @@
       </form>
     </div>
   </div>
-  <script>(function(){var key='sichuan-trip-access-v1';if(localStorage.getItem(key)==='yes'){document.documentElement.classList.add('unlocked')}document.getElementById('access-form').addEventListener('submit',function(e){e.preventDefault();var v=document.getElementById('access-pass').value;if(v==='qqqyyy'){localStorage.setItem(key,'yes');document.documentElement.classList.add('unlocked')}else{document.getElementById('access-error').textContent='密码错误，请重试';document.getElementById('access-pass').value=''}})})();</script>
-  <header>
+  <script src="access.js"></script>
+  <header class="trip-header">
+    <nav class="trip-nav" aria-label="四川行程页面">
+      <a href="index.html" aria-current="page">行程</a>
+      <a href="transport.html">交通</a>
+      <a href="tickets.html">门票</a>
+    </nav>
     <h1>四川 9 天行程</h1>
-    <nav aria-label="页面"><a href="transport.html">交通</a></nav>
   </header>
   <main>
     <table aria-label="九天行程">

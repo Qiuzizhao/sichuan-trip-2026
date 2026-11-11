@@ -1,0 +1,134 @@
+* { box-sizing: border-box; }
+body {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 4vw, 28px) 28px;
+  color: #202725;
+  font: 15px/1.45 system-ui, sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+h1 { margin: 0; font-size: 21px; }
+h2 { margin: 0 0 4px; font-size: 16px; }
+a { color: #096258; text-underline-offset: 3px; }
+section { padding: 9px 0; border-bottom: 1px solid #dce4e1; }
+ul { margin: 0; padding: 0; list-style: none; }
+li + li { margin-top: 3px; }
+time { font-weight: 650; }
+.stop { display: inline-block; }
+.note { margin: 4px 0 0; color: #475650; font-size: 14px; }
+#access-lock {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+html.unlocked #access-lock { display: none; }
+#access-panel { width: min(100%, 20rem); }
+#access-form { margin-top: 12px; }
+#access-form input, #access-form button {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 16px;
+}
+#access-pass { border: 1px solid #7e8c87; }
+#access-submit {
+  margin-top: 8px;
+  border: 0;
+  background: #096258;
+  color: white;
+  cursor: pointer;
+}
+#access-error { margin-top: 4px; color: #a31a1a; }
+table { width: 100%; border-collapse: collapse; margin-bottom: 6px; }
+th, td { padding: 4px 8px; border-bottom: 1px solid #dce4e1; text-align: left; }
+thead { background: #eef4f1; }
+tbody th { width: 5rem; font-weight: 500; white-space: nowrap; }
+section { scroll-margin-top: 8px; }
+section:target h2 { color: #096258; }
+section:first-child { padding-top: 4px; }
+.tickets li {
+  display: grid;
+  grid-template-columns: 4.25rem minmax(0, 1fr);
+  gap: 4px;
+}
+.pending li { font-size: 14px; }
+
+.trip-header { padding: 12px 0 8px; }
+
+.trip-nav {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 4px;
+  margin-bottom: 14px;
+  padding: 4px;
+  border: 1px solid #dce4e1;
+  border-radius: 14px;
+  background: #f0f5f2;
+}
+
+.trip-nav a {
+  display: grid;
+  min-height: 44px;
+  place-items: center;
+  border-radius: 9px;
+  color: #32473f;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.trip-nav a:hover { background: #e1ebe5; }
+.trip-nav a[aria-current="page"] { background: #096258; color: #fff; }
+
+.trip-nav a:focus-visible {
+  outline: 2px solid #096258;
+  outline-offset: 2px;
+}
+
+.admission-day {
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr);
+  gap: clamp(8px, 3vw, 18px);
+  padding: 12px 0;
+  border-bottom: 1px solid #dce4e1;
+}
+
+.admission-day h2 {
+  margin: 2px 0 0;
+  color: #096258;
+  font-size: 14px;
+}
+
+.admission-venue + .admission-venue {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #e7ede9;
+}
+
+.admission-venue h3 { margin: 0 0 4px; font-size: 16px; }
+
+.admission-items { margin: 0; font-size: 14px; }
+
+.admission-items > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.admission-items > div + div { margin-top: 4px; }
+.admission-items dd { margin: 0; white-space: nowrap; }
+
+.admission-status {
+  padding: 1px 7px;
+  border-radius: 5px;
+  background: #f0f2f1;
+  color: #475650;
+  font-size: 12px;
+}
+
+.admission-booked {
+  background: #e1f1e9;
+  color: #095740;
+  font-weight: 650;
+}
