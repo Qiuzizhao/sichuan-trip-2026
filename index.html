@@ -7,10 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>四川 9 天行程</title>
   <style>
-    html:not(.unlocked) body > header,
-    html:not(.unlocked) body > main { display: none; }
 {% include_relative trip.css %}
   </style>
+  <script>
+{% include_relative access.js %}
+  </script>
 </head>
 <body>
   <div id="access-lock">
@@ -23,9 +24,6 @@
       </form>
     </div>
   </div>
-  <script>
-{% include_relative access.js %}
-  </script>
   <header class="trip-header">
     <nav class="trip-nav" aria-label="四川行程页面">
       <a href="index.html" aria-current="page">行程</a>

@@ -1,4 +1,7 @@
 * { box-sizing: border-box; }
+html.unlocked { scrollbar-gutter: stable; }
+html:not(.unlocked) body > header,
+html:not(.unlocked) body > main { display: none; }
 body {
   max-width: 42rem;
   margin: 0 auto;
